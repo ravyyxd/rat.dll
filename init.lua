@@ -1,3 +1,14 @@
+local bindableFunction = Instance.new("BindableFunction")
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "ratAPI";
+    Text = "already injected!";
+    Duration = "5";
+    callbakc = bindableFunction;
+    Button1 = "I'M KNOW";
+})
+
+
 --local fakeIdentity = 6 
 
 --local function getidentity()
