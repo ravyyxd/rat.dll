@@ -1,11 +1,11 @@
-local fakeIdentity = 6 
+--local fakeIdentity = 6 
 
-local function getidentity()
-    return fakeIdentity
-end
+--local function getidentity()
+--    return fakeIdentity
+--end
 
-getgenv().getidentity = getidentity
-getgenv().Level = getidentity
+--getgenv().getidentity = getidentity
+--getgenv().Level = getidentity
 
 local blockedurls = {
     'https://v4.ident.me',
