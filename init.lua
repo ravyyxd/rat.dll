@@ -1,8 +1,8 @@
 local bindableFunction = Instance.new("BindableFunction")
  
 game.StarterGui:SetCore("SendNotification", {
-    Title = "ratAPI";
-    Text = "already injected!";
+    Title = "Executor";
+    Text = "Successfully attached!";
     Duration = "5";
     callbakc = bindableFunction;
     Button1 = "I'M KNOW";
