@@ -8,6 +8,31 @@ game.StarterGui:SetCore("SendNotification", {
     Button1 = "I'M KNOW";
 })
 
+local Players = game:GetService("Players")
+
+local function getPlayerCount()
+    return #Players:GetPlayers()
+end
+
+local function teleportPlayer(player, position)
+    if player and player.Character and position then
+        local humanoidRootPart = player.Character:FindFirstChild("HumanoidRootPart")
+        if humanoidRootPart then
+            humanoidRootPart.Position = position
+            return true
+        end
+    end
+    return false
+end
+
+local function createPart(size, position)
+    local part = Instance.new("Part")
+    part.Size = size
+    part.Position = position
+    part.Parent = game.Workspace
+    return part
+end
+
 
 local fakeIdentity = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 
