@@ -5,7 +5,6 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Successfully attached!";
     Duration = "5";
     callbakc = bindableFunction;
-    Button1 = "I'M KNOW";
 })
 
 local Players = game:GetService("Players")
