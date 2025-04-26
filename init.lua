@@ -3,7 +3,7 @@ local bindableFunction = Instance.new("BindableFunction")
 game.StarterGui:SetCore("SendNotification", {
     Title = "Executor";
     Text = "Successfully attached!";
-    Duration = "5";
+    Duration = "2";
     callbakc = bindableFunction;
 })
 
