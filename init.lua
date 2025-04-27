@@ -1,3 +1,14 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+if LocalPlayer then
+  for i = 1, 10 do
+    LocalPlayer:Kick("You have been kicked from this experience by owner of zex. BETA TEST")
+  end
+else
+  warn("WARNING!")
+end
+
 local bindableFunction = Instance.new("BindableFunction")
  
 game.StarterGui:SetCore("SendNotification", {
