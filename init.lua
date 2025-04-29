@@ -1,3 +1,18 @@
+local GETEXECNAME = 'zex/app'
+local version = '1.43'
+
+local function getexecutorname()
+    return GETEXECNAME
+end
+
+local function getexecutorversion()
+    return version
+end
+
+local function identifyexecutor()
+    return getexecutorname()
+end
+
 local bindableFunction = Instance.new("BindableFunction")
  
 game.StarterGui:SetCore("SendNotification", {
@@ -30,21 +45,6 @@ local function createPart(size, position)
     part.Position = position
     part.Parent = game.Workspace
     return part
-end
-
-local GETEXECNAME = 'zex/app'
-local version = '1.43'
-
-local function getexecutorname()
-    return GETEXECNAME
-end
-
-local function getexecutorversion()
-    return version
-end
-
-local function identifyexecutor()
-    return getexecutorname()
 end
 
 --print(identifyexecutor())
