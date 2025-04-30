@@ -1,3 +1,1 @@
-THIS IS NETWORK.MD
-
-SOON!
+# i am finnaly completed it #
