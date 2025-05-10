@@ -1,3 +1,144 @@
+-- local Players = game:GetService("Players")
+-- local Lighting = game:GetService("Lighting")
+-- local LocalPlayer = Players.LocalPlayer
+
+-- local function setNight()
+--     Lighting.TimeOfDay = "00:00:00"
+--     Lighting.Brightness = 0.2
+--     Lighting.Ambient = Color3.fromRGB(20, 20, 40)
+--     Lighting.FogEnd = 200
+--     Lighting.FogColor = Color3.fromRGB(10, 10, 20)
+-- end
+
+-- local function createLantern()
+--     local lantern = Instance.new("Tool")
+--     lantern.Name = "Lantern"
+--     lantern.RequiresHandle = true
+--     lantern.Parent = LocalPlayer:WaitForChild("Backpack")
+
+--     local handle = Instance.new("Part")
+--     handle.Name = "Handle"
+--     handle.Size = Vector3.new(0.5, 2, 0.5) 
+--     handle.Position = Vector3.new(0, 0, 0)
+--     handle.Anchored = false
+--     handle.CanCollide = false
+--     handle.BrickColor = BrickColor.new("Brown") 
+--     handle.Parent = lantern
+
+--     local lightPart = Instance.new("Part")
+--     lightPart.Name = "LightPart"
+--     lightPart.Size = Vector3.new(0.8, 0.8, 0.8) 
+--     lightPart.Position = Vector3.new(0, 1.5, 0)
+--     lightPart.Anchored = false
+--     lightPart.CanCollide = false
+--     lightPart.BrickColor = BrickColor.new("Yellow")
+--     lightPart.Transparency = 0.3
+--     lightPart.Parent = lantern
+
+--     local weld = Instance.new("WeldConstraint")
+--     weld.Part0 = handle
+--     weld.Part1 = lightPart
+--     weld.Parent = handle
+
+--     local pointLight = Instance.new("PointLight")
+--     pointLight.Name = "LanternLight"
+--     pointLight.Brightness = 2 
+--     pointLight.Range = 15
+--     pointLight.Color = Color3.fromRGB(255, 255, 200)
+--     pointLight.Enabled = false
+--     pointLight.Parent = lightPart
+
+--     local fire = Instance.new("Fire")
+--     fire.Name = "FireEffect"
+--     fire.Size = 3
+--     fire.Heat = 5
+--     fire.Enabled = false
+--     fire.Parent = lightPart
+
+--     lantern.Equipped:Connect(function()
+--         pointLight.Enabled = true
+--         fire.Enabled = true
+--     end)
+
+--     lantern.Unequipped:Connect(function()
+--         pointLight.Enabled = false
+--         fire.Enabled = false
+--     end)
+-- end
+
+-- setNight()
+
+-- createLantern()
+
+-- LocalPlayer.CharacterAdded:Connect(function()
+--     wait(1)
+--     if not LocalPlayer.Backpack:FindFirstChild("Lantern") then
+--         createLantern()
+--     end
+-- end)
+
+
+-- local Players = game:GetService("Players")
+-- local LocalPlayer = Players.LocalPlayer
+
+-- local function createFakeServerMessage(message)
+--     local ScreenGui = Instance.new("ScreenGui")
+--     ScreenGui.Name = "FakeServerMessageGUI"
+--     ScreenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+--     ScreenGui.IgnoreGuiInset = true
+
+--     local TextLabel = Instance.new("TextLabel")
+--     TextLabel.Name = "ServerMessage"
+--     TextLabel.Parent = ScreenGui
+--     TextLabel.BackgroundTransparency = 1
+--     TextLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+--     TextLabel.TextColor3 = Color3.new(1, 1, 1)
+--     TextLabel.Text = message
+--     TextLabel.Size = UDim2.new(0.8, 0, 0.07, 0)
+--     TextLabel.Position = UDim2.new(0.1, 0, 0, 0)
+--     TextLabel.Font = Enum.Font.Fantasy -- zx font
+--     TextLabel.TextScaled = false
+--     TextLabel.TextSize = 30
+--     TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+--     TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+
+--     return ScreenGui
+-- end
+
+-- local function fadeOutAndDestroy(gui, duration)
+--     local tweenInfo = TweenInfo.new(
+--         duration,
+--         Enum.EasingStyle.Linear,
+--         Enum.EasingDirection.Out,
+--         0,
+--         false
+--     )
+--     local tween = game:GetService("TweenService"):Create(gui.ServerMessage, tweenInfo, {TextTransparency = 1})
+--     tween:Play()
+
+--     tween.Completed:Connect(function()
+--         gui:Destroy()
+--     end)
+-- end
+
+-- local function showAndHideMessage(message, duration)
+--     local gui = createFakeServerMessage(message)
+--     fadeOutAndDestroy(gui, duration)
+-- end
+
+-- local message = "Have a happy nightly update! THANKS, ZEX!"
+-- local duration = 9
+
+-- while true do
+--     showAndHideMessage(message, duration)
+--     task.wait(10000000000000)
+-- end
+
+-- print("HAPPY UPDATE!")
+
+
+
+
 local GETEXECNAME = 'zex/app'
 local version = '1.43'
 
