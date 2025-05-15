@@ -1,27 +1,27 @@
 --test funcs
 
--- local exploit_identity = ...
+-- local exploit_identitylvl = ...
 
 -- function getthreadidentity()  
---    return exploit_identity
+--    return exploit_identitylvl
 -- end
 
 -- function getidentity() 
---    return exploit_identity
+--    return exploit_identitylvl
 -- end
 
 -- function getthreadcontext() 
---    return exploit_identity 
+--    return exploit_identitylvl
 -- end
 
 -- function setthreadidentity(identity) 
---   return exploit_identity 
+--   return exploit_identitylvl 
 -- end
 
 -- function setidentity(identity)
---   return exploit_identity
+--   return exploit_identitylvl
 -- end
 
 -- function setthreadcontext(identity)
---   return exploit_identity 
+--   return exploit_identitylvl 
 -- end
