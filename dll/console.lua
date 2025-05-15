@@ -1,6 +1,8 @@
 --pls stop skid my code 💔
 --it's just a basic funcs
 
+--soon!...
+
 function rconsoleclear()
 end
 
