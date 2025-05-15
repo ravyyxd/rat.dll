@@ -1,3 +1,7 @@
+--DON'T SKID!
+--maded only for zx!
+
+
 -- local Players = game:GetService("Players")
 -- local Lighting = game:GetService("Lighting")
 -- local LocalPlayer = Players.LocalPlayer
