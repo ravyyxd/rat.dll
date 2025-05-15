@@ -5,6 +5,8 @@
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/input.lua", true))()
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/setup.lua", true))()
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/names.lua", true))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/other.lua", true))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/setup.lua", true))()
 
 -- local Players = game:GetService("Players")
 -- local Lighting = game:GetService("Lighting")
