@@ -15,7 +15,7 @@
 -- end
 
 -- function setthreadidentity(identity) 
---   return exploit_identitylvl 
+--   exploit_identitylvl = identity
 -- end
 
 -- function setidentity(identity)
