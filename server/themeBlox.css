@@ -1,0 +1,368 @@
+/* ThemeCraft CSS
+ * © Copyright 2022-2025 Julli4n, All rights reserved
+ * Enhances UI with customizable themes, modals, file uploads, and more.
+ */
+
+/* ==========================================================================
+   Base Variables
+   ========================================================================== */
+:root {
+  --primary-color: #00b06f; /* Success */
+  --secondary-color: #f74b52; /* Alert */
+  --accent-color: #f6b702; /* Yellow */
+  --warning-color: #f68802; /* Warning */
+  --transition-base: 0.3s ease;
+}
+
+/* Dark Theme Variables */
+:root:has(.dark-theme) {
+  --icon-color: #fff;
+  --tab-color: #393b3d;
+  --nav-icon-color: #afb0b0;
+  --nav-icon-hover-color: #fff;
+  --text-color: #fff;
+  --text-secondary-color: #bdbebe;
+  --info-color: #fff;
+  --loading-color: #656668;
+  --bg-1-color: #232527;
+  --bg-2-color: #191b1d;
+  --bg-3-color: #111214;
+  --bg-4-color: #212121;
+  --line-color: #656668;
+}
+
+/* Light Theme Variables */
+:root:has(.light-theme) {
+  --icon-color: #393b3d;
+  --tab-color: #fff;
+  --nav-icon-color: #626566;
+  --nav-icon-hover-color: #2b2d2f;
+  --text-color: #393b3d;
+  --text-secondary-color: #7b7c7d;
+  --info-color: #393b3d;
+  --loading-color: #bdbebe;
+  --bg-1-color: #f2f4f5;
+  --bg-2-color: #dee1e3;
+  --bg-3-color: #c7cbce;
+  --bg-4-color: #e3e3e3;
+  --line-color: #bdbebe;
+}
+
+/* High-Contrast Mode */
+:root:has(.high-contrast) {
+  --text-color: #000;
+  --bg-1-color: #fff;
+  --line-color: #000;
+  --icon-color: #000;
+}
+
+/* Custom Theme Support */
+:root:has(.custom-theme) {
+  --bg-1-color: var(--user-bg1, #232527);
+  --text-color: var(--user-text, #fff);
+  --icon-color: var(--user-icon, #fff);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+@font-face {
+  font-family: "ThemeCraft Regular";
+  font-display: swap;
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ThemeCraft-Regular.woff2");
+}
+
+.themecraft-font {
+  font-family: "ThemeCraft Regular", "Builder Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* ==========================================================================
+   Color Picker
+   ========================================================================== */
+.themecraft-color-group {
+  display: inline;
+}
+
+.themecraft-color-group input {
+  vertical-align: middle;
+}
+
+.themecraft-color-group .themecraft-color-input {
+  cursor: pointer;
+  padding: 0;
+  height: 32px;
+}
+
+.themecraft-color-group .themecraft-color-input::-webkit-color-swatch,
+.themecraft-color-group .themecraft-color-input::-webkit-color-swatch-wrapper,
+.themecraft-color-group .themecraft-color-input::-moz-color-swatch {
+  border: none;
+  border-radius: 0;
+}
+
+.themecraft-color-group .themecraft-color-input.circular-input {
+  width: 32px;
+  border-radius: 100%;
+}
+
+.themecraft-color-group .themecraft-color-input.circular-input::-webkit-color-swatch,
+.themecraft-color-group .themecraft-color-input.circular-input::-webkit-color-swatch-wrapper,
+.themecraft-color-group .themecraft-color-input.circular-input::-moz-color-swatch {
+  border-radius: 100%;
+}
+
+.themecraft-color-group .themecraft-color-input:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Range Slider
+   ========================================================================== */
+.light-theme .themecraft-range::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #393b3d var(--value), #c7cbce var(--value));
+}
+
+.dark-theme .themecraft-range::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #fff var(--value), #111214 var(--value));
+}
+
+/* ==========================================================================
+   Circular Progress Bar
+   ========================================================================== */
+.CircularProgressbar {
+  width: 100%;
+  vertical-align: middle;
+  --progress-size: 100px;
+  width: var(--progress-size);
+  height: var(--progress-size);
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--user-progress-color, var(--primary-color));
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: var(--nav-icon-color);
+  stroke-opacity: 0.3;
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+.themecraft-modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.themecraft-modal-container {
+  overflow-y: auto;
+}
+
+.themecraft-modal-container.show .modal-dialog {
+  transform: translateZ(0);
+}
+
+.themecraft-modal-container .modal-content {
+  border-radius: 8px;
+}
+
+.themecraft-modal-container .modal-body {
+  white-space: break-spaces;
+}
+
+.themecraft-modal-container .full-width-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.themecraft-modal-container .full-width-modal-buttons > button {
+  flex: 1;
+  text-wrap: wrap;
+  word-break: break-word;
+}
+
+/* ==========================================================================
+   Alerts
+   ========================================================================== */
+.themecraft-alert {
+  height: fit-content;
+  z-index: 99999;
+}
+
+.themecraft-alert:not(.on) {
+ 	beginning to apply alert styles here top: -10%;
+}
+
+.themecraft-alert .alert-content {
+  height: fit-content;
+}
+
+.themecraft-alert:not(.system-feedback) .icon-close-white {
+  float: right;
+  margin-right: 15px;
+}
+
+.themecraft-alert:not(.system-feedback).alert-info .icon-close-white,
+.themecraft-alert:not(.system-feedback).alert-loading .icon-close-white {
+  filter: invert(1);
+}
+
+/* ==========================================================================
+   File Upload
+   ========================================================================== */
+.themecraft-file-upload-container {
+  position: relative;
+  float: left;
+  width: 420px;
+}
+
+.themecraft-file-upload-container .file-upload-content {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px dashed var(--line-color);
+}
+
+.themecraft-file-upload-container .preview-overlay {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(var(--bg-1-color), 0.6);
+}
+
+.light-theme .themecraft-file-upload-container .preview-overlay .preview-text {
+  color: #393b3d;
+}
+
+.dark-theme .themecraft-file-upload-container .preview-overlay .preview-text {
+  color: #fff;
+}
+
+/* Responsive File Upload */
+@media (max-width: 991px) {
+  .themecraft-file-upload-container,
+  .themecraft-file-upload-container .file-upload-content {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .themecraft-file-upload-container.full-screen {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ==========================================================================
+   Scrollbar
+   ========================================================================== */
+.themecraft-scrollbar {
+  overflow: overlay;
+  scrollbar-width: auto;
+  scrollbar-color: rgba(25, 25, 25, 0.3) transparent;
+}
+
+.themecraft-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.themecraft-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 25, 25, 0.3);
+  border-radius: 3px;
+}
+
+.themecraft-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 25, 25, 0.5);
+}
+
+/* ==========================================================================
+   Save Indicator (Auto-Save Feedback)
+   ========================================================================== */
+.themecraft-save-indicator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.themecraft-save-indicator.show {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.themecraft-btn {
+  transition: transform var(--transition-base), background-color var(--transition-base);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.themecraft-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.high-contrast .themecraft-btn {
+  border: 2px solid #000;
+}
+
+/* ==========================================================================
+   Theme Preview
+   ========================================================================== */
+.themecraft-theme-preview {
+  width: 200px;
+  height: 100px;
+  background: var(--bg-1-color);
+  color: var(--text-color);
+  border: 1px solid var(--line-color);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Error Feedback
+   ========================================================================== */
+.themecraft-error {
+  color: var(--secondary-color);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+.themecraft-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.themecraft-grayscale {
+  filter: grayscale(1);
+}
