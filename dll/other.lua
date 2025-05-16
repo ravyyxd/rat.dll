@@ -15,3 +15,17 @@
             end
 
         end
+
+
+
+
+nyx = {}
+
+function nyx.print(...)
+    local message = table.concat({...}, ' '):gsub("TestService:", "")
+    game:GetService('TestService'):Message(message)
+end
+
+function nyx.identity()
+    return 
+end
