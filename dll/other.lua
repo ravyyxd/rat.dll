@@ -19,13 +19,15 @@
 
 
 
-nyx = {}
+zex = {}
 
-function nyx.print(...)
+function zex.print(...)
     local message = table.concat({...}, ' '):gsub("TestService:", "")
     game:GetService('TestService'):Message(message)
 end
 
-function nyx.identity()
-    return 
-end
+-- function zex.identity()
+--     return ...
+-- end
+
+--more??
