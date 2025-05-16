@@ -26,6 +26,15 @@ function zex.print(...)
     game:GetService('TestService'):Message(message)
 end
 
+function zex.clear()
+    game:GetService('TestService'):ClearOutput()
+end
+
+function zex.warn(...)
+    local message = "[WARNING] " .. table.concat({...}, ' '):gsub("TestService:", "")
+    game:GetService('TestService'):Message(message)
+end
+
 -- function zex.identity()
 --     return ...
 -- end
