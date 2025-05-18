@@ -1,12 +1,22 @@
 --DON'T SKID!
 --maded only for zx!
 
+print("initializing console")
+wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/console.lua", true))()
+print("initializing input")
+wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/input.lua", true))()
+print("initializing functions")
+wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/setup.lua", true))()
+wait(0.5)
+print("initializing names")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/names.lua", true))()
+wait(0.5)
+print("check...")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/other.lua", true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ravyyxd/rat.dll/refs/heads/main/dll/setup.lua", true))()
+wait(0.5)
 
 warn('dll loaded!')
 warn('zex injected')
