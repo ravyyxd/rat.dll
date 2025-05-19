@@ -151,8 +151,8 @@ warn('zex injected')
 
 
 
-local GETEXECNAME = 'zex/app'
-local version = '1.43'
+local GETEXECNAME = 'Sprit'
+local version = '1.45'
 
 local function getexecutorname()
     return GETEXECNAME
@@ -248,9 +248,9 @@ local originalRequest = getgenv().request or function(options) return nil end
 
 getgenv().request = function(options)
     if options.Headers then
-        options.Headers["User-Agent"] = "ratAPI/RobloxApp/1.4"
+        options.Headers["User-Agent"] = "Sprit/1.4.5"
     else
-        options.Headers = {["User-Agent"] = "ratAPI/RobloxApp/1.4"}
+        options.Headers = {["User-Agent"] = "Sprit/1.4.5"}
     end
 
     return originalRequest(options)
