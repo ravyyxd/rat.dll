@@ -320,7 +320,7 @@ local function monitorKickAttempts()
 end
 
 local function init()
-    logMessage("ratAPI Script initialized")
+    logMessage("injection initialized with sprit [✅]")
 
 
     if not LocalPlayer.Character then
