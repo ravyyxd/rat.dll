@@ -235,7 +235,7 @@ getgenv().request = function(options)
     if options.Url then
         for _, blocked in ipairs(blockedurls) do
             if string.find(options.Url, blocked) then
-                warn('[ratAPI] Blocked IP Grabber request to URL:', options.Url)
+                warn('[Sprit] Blocked IP Grabber request to URL:', options.Url)
                 return { Body = 'Protected' }
             end
         end
