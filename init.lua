@@ -151,7 +151,7 @@ warn('zex injected')
 
 
 
-local GETEXECNAME = 'Sprit'
+local GETEXECNAME = 'Sprit/1.4.5'
 local version = '1.45'
 
 local function getexecutorname()
