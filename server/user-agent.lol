@@ -1,3 +1,3 @@
 {
-    "user-agent": "init.lua"
+    "user-agent": "Sprit"
 }
