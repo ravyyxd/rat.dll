@@ -24,9 +24,9 @@ function setthreadidentity(lvl)
 	else
 		identity = lvl
 		printidentity = printidentity()
-  else if lvl < 0 then
-    print("uh.. what?")
-  end
+  	else if lvl < 0 then
+    		print("uh.. what?")
+  	end
 end
 
 -- function printidentity
