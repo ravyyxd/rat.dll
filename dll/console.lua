@@ -15,8 +15,9 @@ end
 function rconsoleinput() 
 end
 
-function rconsoleprint(txt) 
-end
+function rconsoleprint(...)
+  print(...)
+end --so yeah, it just prints user input to f9 console
 
 function consoleclear() 
 end
