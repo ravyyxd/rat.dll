@@ -33,9 +33,7 @@ end
 --   return exploit_identitylvl
 -- end
 
--- function setthreadcontext(identity)
---   return exploit_identitylvl 
--- end
+--setthreadidentity = setthreadcontext
 
 function printidentity()
 	print("ok! done - current identity is" .. identity)
