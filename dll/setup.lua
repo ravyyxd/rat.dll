@@ -1,3 +1,7 @@
+checkcaller = function()
+	return true
+end
+
 --test funcs
 
 -- local exploit_identitylvl = ...
