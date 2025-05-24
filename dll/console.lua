@@ -1,18 +1,20 @@
 --pls stop skid my code 💔
 --it's just a basic funcs
 
---soon!...
-
 function rconsoleclear()
+
 end
 
 function rconsolecreate()
+  game.CoreGui.DevConsoleMaster.DevConsoleWindow.Visible = true
 end
 
 function rconsoledestroy()
+    game.CoreGui.DevConsoleMaster.DevConsoleWindow:Destroy()
 end
 
-function rconsoleinput() 
+function rconsoleinput(enter) 
+  game.CoreGui.DevConsoleMaster.DevConsoleWindow.DevConsoleUI.MainView.UtilAndTab.UtilBar.SearchBar.InputField.TextBox.Text = enter 
 end
 
 function rconsoleprint(...)
@@ -32,12 +34,15 @@ function consoleclear()
 end
 
 function consolecreate() 
+    game.CoreGui.DevConsoleMaster.DevConsoleWindow.Visible = true
 end
 
 function consoledestroy() 
+  game.CoreGui.DevConsoleMaster.DevConsoleWindow:Destroy()
 end
 
-function consoleinput() 
+function consoleinput(inputlol)
+  game:GetService("CoreGui").DevConsoleMaster.DevConsoleWindow.DevConsoleUI.MainView.UtilAndTab.UtilBar.SearchBar.InputField.TextBox.Text = inputlol
 end
 
 function consoleprint(txt) 
