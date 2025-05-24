@@ -17,7 +17,16 @@ end
 
 function rconsoleprint(...)
   print(...)
-end --so yeah, it just prints user input to f9 console
+  local args = {...}
+  local unsupported = {"zex is a shit", "zex is garbage"}
+  for _, arg in ipairs(args) do
+    for _, bad in ipairs(unsupported) do
+      if arg == bad then
+        print("why?")
+      end
+    end
+  end
+end
 
 function consoleclear() 
 end
@@ -32,10 +41,21 @@ function consoleinput()
 end
 
 function consoleprint(txt) 
+  print(...)
+  local args = {...}
+  local unsupported = {"zex is a shit", "zex is garbage"}
+  for _, arg in ipairs(args) do
+    for _, bad in ipairs(unsupported) do
+      if arg == bad then
+        print("why?")
+      end
+    end
+  end
 end
 
 function rconsolename(txt) 
 end
 
-function consolesettitle(txt) 
+function consolesettitle(text) 
+  game.CoreGui.DevConsoleMaster.DevConsoleWindow.DevConsoleUI.TopBar.WindowTitle.Text = text
 end
