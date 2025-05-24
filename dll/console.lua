@@ -54,6 +54,7 @@ function consoleprint(txt)
 end
 
 function rconsolename(txt) 
+    game.CoreGui.DevConsoleMaster.DevConsoleWindow.DevConsoleUI.TopBar.WindowTitle.Text = text
 end
 
 function consolesettitle(text) 
