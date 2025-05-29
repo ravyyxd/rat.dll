@@ -128,3 +128,8 @@ function typestring(str, delay)
         end
     end
 end
+
+
+--uh soo yeah
+--we just can return true because it: test("mouse2click", {})
+--but i think if i'm make for it just returns true it FAKE
