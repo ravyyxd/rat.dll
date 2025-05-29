@@ -19,18 +19,18 @@ end
 -- end
 
 function setthreadidentity(lvl)
-	if type(identity) ~= "number" then
-		error("got identity = ".. lvl .."idk")
-	end
+  if type(identity) ~= "number" then
+	error("got identity = ".. lvl .."idk")
+  end
 
-	if (id > 7) then
-		error("no")
-	else
-		identity = lvl
-		printidentity = printidentity()
-  	else if lvl < 0 then
-    		print("uh.. what?")
-  	end
+  if (id > 7) then
+	error("no")
+  else
+	identity = lvl
+	printidentity = printidentity()
+  else if lvl < 0 then
+    	print("uh.. what?")
+  end
 end
 
 -- function printidentity
@@ -40,5 +40,5 @@ end
 --setthreadidentity = setthreadcontext
 
 function printidentity()
-	print("ok! done - current identity is" .. identity)
+  print("ok! done - current identity is" .. identity)
 end
