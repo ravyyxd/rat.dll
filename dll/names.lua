@@ -1,5 +1,5 @@
 -- local GETEXECNAME = 'zex/app'
--- local version = '1.51'
+-- local version = '1.52'
 
 -- local function getexecutorname()
 --     return GETEXECNAME
